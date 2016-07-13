@@ -1,12 +1,145 @@
-body{
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Hind', sans-serif;
+
+}
+
+*{
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
 	margin: 0;
 	padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6{
-	font-family: 'Exo', sans-serif;
+.bg-main {
+	background: url("../images/bg.jpg");
+	background-size: cover;
+	width: 100%;
+	height: 100%;
 }
 
+.left-panel {
+	    width: 300px;
+    background: rgba(56, 55, 55, 0.76);
+    height: 550px;
+    border-radius: 10px;
+    margin-left: 1%;
+    position: relative;
+    top: 8%;
+}
+
+.top-side {
+	width: 100%;
+    height: 90px;
+    position: relative;
+}
+
+.menu {
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: table;
+    padding: 0 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu-box {
+	width: 34px;
+    height: 30px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.menu-box span {
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+	transition: all cubic-bezier(0.28, 0.4, 0.29, 0.88) 0.5s;
+	-webkit-transition: all cubic-bezier(0.28, 0.4, 0.29, 0.88) 0.5s;
+	-moz-transition: all cubic-bezier(0.28, 0.4, 0.29, 0.88) 0.5s;
+}
+
+.menu-box span:hover {
+	color: #ffff83;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.logo-in {
+	width: 130px;
+    display: table-cell;
+    vertical-align: middle;
+    height: 40px;
+    text-align: center;
+}
+
+.logo img {
+	width: 120px;
+}
+
+.bottom-side {
+    width: 100%;
+    height: auto;
+}
+
+.bottom-side h3 {
+    color: #dcdcdc;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+}
+
+.front-bar {
+	margin: 1em 0;
+}
+
+.front-bar_type {
+    width: 50%;
+    height: 110px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #929292;
+    border-left: 0;
+}
+
+.fb_box {
+    padding: 27px 0;
+    cursor: pointer;
+    transition: all cubic-bezier(0.28, 0.4, 0.29, 0.88) 0.5s;
+	-webkit-transition: all cubic-bezier(0.28, 0.4, 0.29, 0.88) 0.5s;
+	-moz-transition: all cubic-bezier(0.28, 0.4, 0.29, 0.88) 0.5s;
+}
+
+.fb_text {
+    line-height: 27px;
+    color: white;
+    opacity: 0.5;
+    transition: all cubic-bezier(0.28, 0.4, 0.29, 0.88) 0.5s;
+	-webkit-transition: all cubic-bezier(0.28, 0.4, 0.29, 0.88) 0.5s;
+	-moz-transition: all cubic-bezier(0.28, 0.4, 0.29, 0.88) 0.5s;
+}
+
+.fb_box:hover {
+	background-color: #696968;
+}
+
+.fb_box:hover .fb_text {
+	opacity: 1;
+}
 
 
 
