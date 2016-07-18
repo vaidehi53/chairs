@@ -6,9 +6,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/themify-icons.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
 </head>
 
-<body>
+<body ng-app="myapp">
 
 <div class="bg-main">
 	<div class="left-panel">
@@ -28,22 +29,130 @@
 
 		<div class="bottom-side">
 			<h3>Choose Room Type</h3>
-			<div class="front-bar">
-				<div class="front-bar_type">
-					<div class="fb_box">
-					<div class="fb_text"><span class="ti-desktop"></span></div>
-					<div class="fb_text"><span>Living Room</span></div>
+			<div class="front-bar clearfix">
+				<ul class="bxslider">
+					<li>
+					<div class="front-bar_type">
+						<div class="fb_box">
+						<div class="fb_text"><span class="ti-desktop"></span></div>
+						<div class="fb_text"><span>Living Room</span></div>
+						</div>
 					</div>
-				</div>
+					<div class="front-bar_type">
+						<div class="fb_box">
+						<div class="fb_text"><span class="ti-desktop"></span></div>
+						<div class="fb_text"><span>Living Room</span></div>
+						</div>
+					</div>
+					<div class="front-bar_type">
+						<div class="fb_box">
+						<div class="fb_text"><span class="ti-desktop"></span></div>
+						<div class="fb_text"><span>Living Room</span></div>
+						</div>
+					</div>
+					<div class="front-bar_type">
+						<div class="fb_box">
+						<div class="fb_text"><span class="ti-desktop"></span></div>
+						<div class="fb_text"><span>Living Room</span></div>
+						</div>
+					</div>
+					<div class="front-bar_type">
+						<div class="fb_box">
+						<div class="fb_text"><span class="ti-desktop"></span></div>
+						<div class="fb_text"><span>Living Room</span></div>
+						</div>
+					</div>
+					<div class="front-bar_type">
+						<div class="fb_box">
+						<div class="fb_text"><span class="ti-desktop"></span></div>
+						<div class="fb_text"><span>Living Room</span></div>
+						</div>
+					</div>
+					</li>
+					<li>
+					<div class="front-bar_type">
+						<div class="fb_box">
+						<div class="fb_text"><span class="ti-desktop"></span></div>
+						<div class="fb_text"><span>Living Room</span></div>
+						</div>
+					</div>
+					<div class="front-bar_type">
+						<div class="fb_box">
+						<div class="fb_text"><span class="ti-desktop"></span></div>
+						<div class="fb_text"><span>Living Room</span></div>
+						</div>
+					</div>
+					<div class="front-bar_type">
+						<div class="fb_box">
+						<div class="fb_text"><span class="ti-desktop"></span></div>
+						<div class="fb_text"><span>Living Room</span></div>
+						</div>
+					</div>
+					<div class="front-bar_type">
+						<div class="fb_box">
+						<div class="fb_text"><span class="ti-desktop"></span></div>
+						<div class="fb_text"><span>Living Room</span></div>
+						</div>
+					</div>
+					<div class="front-bar_type">
+						<div class="fb_box">
+						<div class="fb_text"><span class="ti-desktop"></span></div>
+						<div class="fb_text"><span>Living Room</span></div>
+						</div>
+					</div>
+					<div class="front-bar_type">
+						<div class="fb_box">
+						<div class="fb_text"><span class="ti-desktop"></span></div>
+						<div class="fb_text"><span>Living Room</span></div>
+						</div>
+					</div>
+					</li>
+				</ul>
 			</div>
+						
 		</div>
 
 	</div>
 
+	<div class="right-panel">
+		<div class="right-in">
+			<div class="bottom-side">
+				<h3>Properties</h3>
+				<div class="size-box">
+						<div class="s_size">Size : </div>
+						<div class="swidth">
+							<span class="swSpan">200</span>
+							<span>Width</span>
+						</div>
+						<div class="sheight">
+							<span class="swSpan">200</span>
+							<span>Height</span>
+						</div>
+				</div>
+			</div>
+		</div>
 
+		<div class="right-in" ng-controller="mycontrol">
+			<div class="bottom-side">
+				<h3>Objects</h3>
+
+				<select ng-model="select" ng-options="x for x in chairs" ng-change="update()"></select>
+				<div class="category_image">
+					<div>
+						<!-- <img src="images/office1.jpg"> -->
+						{{select.img}}
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
 </div>
 
 <script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+<script type="text/javascript" src="js/angular.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 
 </body>
