@@ -18,6 +18,11 @@ h1,h2,h3,h4,h5,h6 {
 	padding: 0;
 }
 
+ul{
+	margin: 0;
+	padding: 0;
+}
+
 .clearfix {
 	display: inline-block;
 }
@@ -210,7 +215,7 @@ span.swSpan {
 }
 
 .category_image img {
-	width: 100%;
+	height: 150px;
 }
 
 .bx-pager-item {
@@ -244,3 +249,16 @@ a.bx-pager-link {
 .bx-viewport{
 	height: 380px;
 }
+
+.inh ul{
+	list-style-type: none;
+}
+
+li {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+
+

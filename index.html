@@ -3,7 +3,7 @@
 <head>
 	<title>my html page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-	<link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet"> -->
 	<link rel="stylesheet" type="text/css" href="css/themify-icons.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	
@@ -136,11 +136,21 @@
 			<div class="bottom-side">
 				<h3>Objects</h3>
 
-				<select ng-model="select" ng-options="x for x in chairs" ng-change="update()"></select>
+				<select id="js-select" ng-model="select" ng-options="x for x in chairs"></select>
 				<div class="category_image">
-					<div>
-						<!-- <img src="images/office1.jpg"> -->
-						{{select.img}}
+					<div class="inh clearfix">
+						<ul class="ul1">
+							<li><img src="images/office1.jpg"></li>
+							<li><img src="images/office2.jpg"></li>
+						</ul>
+						<ul class="ul2" style="display:none;">
+							<li><img src="images/kids1.jpg"></li>
+							<li><img src="images/kids2.jpg"></li>
+						</ul>
+						<ul class="ul3" style="display:none;">
+							<li><img src="images/wood1.jpg"></li>
+							<li><img src="images/wood2.jpg"></li>
+						</ul>
 					</div>
 				</div>
 
