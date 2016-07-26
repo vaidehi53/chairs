@@ -11,7 +11,7 @@
 
 <body ng-app="myapp">
 
-<div class="bg-main">
+<div>
 	<div class="left-panel">
 		<div class="top-side">
 
@@ -136,18 +136,20 @@
 			<div class="bottom-side">
 				<h3>Objects</h3>
 
-				<select id="js-select" ng-model="select" ng-options="x for x in chairs"></select>
+				<select class="div-toggle" id="js-select" data-target="category_image" ng-model="select">
+                	<option ng-repeat="v in box" data-show="{{v.data}}" >{{ v.title }}</option>
+                </select>
 				<div class="category_image">
-					<div class="inh clearfix">
+					<div class="cats clearfix">
 						<ul class="ul1">
 							<li><img src="images/office1.jpg"></li>
 							<li><img src="images/office2.jpg"></li>
 						</ul>
-						<ul class="ul2" style="display:none;">
+						<ul class="ul2">
 							<li><img src="images/kids1.jpg"></li>
 							<li><img src="images/kids2.jpg"></li>
 						</ul>
-						<ul class="ul3" style="display:none;">
+						<ul class="ul3">
 							<li><img src="images/wood1.jpg"></li>
 							<li><img src="images/wood2.jpg"></li>
 						</ul>
@@ -159,11 +161,48 @@
 
 	</div>
 </div>
+<!--<select class="div-toggle" data-target="content">
+	<option>Select One..</option>
+	<option value="office" data-show="#officeBox">office chair</option>
+	<option value="kids" data-show="#kidsBox">kids chair</option>
+	<option value="wooden" data-show="#woodenBox">wooden chair</option>    
+</select>
 
+<div class="content">
+	<ul id="officeBox">
+    	<li><img src="images/ch1.JPG" alt="chair" /></li>
+        <li><img src="images/ch2.jpeg" alt="chair" /></li>
+    </ul>
+	<ul id="kidsBox">
+    	<li><img src="images/ch3.JPG" alt="chair" /></li>
+        <li><img src="images/ch4.JPG" alt="chair" /></li>
+    </ul>
+	<ul id="woodenBox">
+    	<li><img src="images/ch5.JPG" alt="chair" /></li>
+        <li><img src="images/ch6.JPG" alt="chair" /></li>
+    </ul>
+
+</div>
+-->
 <script type="text/javascript" src="js/jquery-3.0.0.js"></script>
 <script type="text/javascript" src="js/angular.js"></script>
 <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+
+<script>
+/*$(document).ready(function(){
+	$(".content ul").hide();
+	$("select.div-toggle").on('change', function(){
+		var target = $(this).data("target");
+		var show = $("option:selected", this).data("show");
+		//debugger;
+		$("." + target).children().hide();
+		$(show).show();
+	});
+
+});
+*/
+</script>
 
 </body>
 </html>

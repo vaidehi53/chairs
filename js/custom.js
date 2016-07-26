@@ -21,23 +21,49 @@ $(document).ready(function(){
 var app = angular.module('myapp', []);
 
 app.controller('mycontrol', function($scope){
-	var chairs =["Office chairs", "Kids chairs", "Woods chairs"];
- 	$scope.chairs=chairs;
-
- 	// var js_option = $scope.chairs.value;
+//	var chairs =["Office chairs", "Kids chairs", "Woods chairs"];
+// 	$scope.chairs=chairs;
+	
+	var box = [{id:1, title:"Office chairs", data: ".ul1"},
+			   {id:2, title:"Kids chairs", data: ".ul2"},
+			   {id:3, title:"Woods chairs", data: ".ul3"}
+			   ];
+	$scope.box=box;
 
 });
 
 
 $(document).ready(function(){
-	// var js_option = $("#js-select option").value;
-//debugger;
-	// alert(js_option);
 
-	$("#js-select").on("click", function(){
+	$(".cats ul").hide();
+	$("select.div-toggle").on('change', function(){
+												 	debugger;
+
+		var target = $(this).data("target");
+		var show = $("option:selected").data("show");
+		$(".cats").children().hide();
+		$(show).show();
 		
 	});
 
 }); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
