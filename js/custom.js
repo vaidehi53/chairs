@@ -21,22 +21,26 @@ $(document).ready(function(){
 var app = angular.module('myapp', []);
 
 app.controller('mycontrol', function($scope){
-	var chairs =["Office chairs", "Kids chairs", "Woods chairs"];
+	var chairs =[
+	{ label: "Office chairs", show: ".ul1"},
+	{ label: "Kids chairs", show: ".ul2"},
+	{ label: "Woods chairs", show: ".ul3"}
+	 ];
  	$scope.chairs=chairs;
-
- 	// var js_option = $scope.chairs.value;
-
+ 	
 });
 
 
 $(document).ready(function(){
-	// var js_option = $("#js-select option").value;
-//debugger;
-	// alert(js_option);
-
-	$("#js-select").on("click", function(){
-		
+	$(".cats ul").hide();
+	$("select").on('change', function(){
+		//debugger;
+		var target = $(this).data('target');
+		var show = $("option:selected").data('show');
+		$(target).children().hide();
+		$(show).show();
 	});
+	
 
 }); 
 

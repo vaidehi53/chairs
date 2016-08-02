@@ -32,81 +32,82 @@
 			<div class="front-bar clearfix">
 				<ul class="bxslider">
 					<li>
-					<div class="front-bar_type">
-						<div class="fb_box">
-						<div class="fb_text"><span class="ti-desktop"></span></div>
-						<div class="fb_text"><span>Living Room</span></div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Living Room</span></div>
+							</div>
 						</div>
-					</div>
-					<div class="front-bar_type">
-						<div class="fb_box">
-						<div class="fb_text"><span class="ti-desktop"></span></div>
-						<div class="fb_text"><span>Living Room</span></div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Kitchen</span></div>
+							</div>
 						</div>
-					</div>
-					<div class="front-bar_type">
-						<div class="fb_box">
-						<div class="fb_text"><span class="ti-desktop"></span></div>
-						<div class="fb_text"><span>Living Room</span></div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Bed Room</span></div>
+							</div>
 						</div>
-					</div>
-					<div class="front-bar_type">
-						<div class="fb_box">
-						<div class="fb_text"><span class="ti-desktop"></span></div>
-						<div class="fb_text"><span>Living Room</span></div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Home Office</span></div>
+							</div>
 						</div>
-					</div>
-					<div class="front-bar_type">
-						<div class="fb_box">
-						<div class="fb_text"><span class="ti-desktop"></span></div>
-						<div class="fb_text"><span>Living Room</span></div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Home Gym</span></div>
+							</div>
 						</div>
-					</div>
-					<div class="front-bar_type">
-						<div class="fb_box">
-						<div class="fb_text"><span class="ti-desktop"></span></div>
-						<div class="fb_text"><span>Living Room</span></div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Closets</span></div>
+							</div>
 						</div>
-					</div>
 					</li>
 					<li>
-					<div class="front-bar_type">
-						<div class="fb_box">
-						<div class="fb_text"><span class="ti-desktop"></span></div>
-						<div class="fb_text"><span>Living Room</span></div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Living Room</span></div>
+							</div>
 						</div>
-					</div>
-					<div class="front-bar_type">
-						<div class="fb_box">
-						<div class="fb_text"><span class="ti-desktop"></span></div>
-						<div class="fb_text"><span>Living Room</span></div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Kitchen</span></div>
+							</div>
 						</div>
-					</div>
-					<div class="front-bar_type">
-						<div class="fb_box">
-						<div class="fb_text"><span class="ti-desktop"></span></div>
-						<div class="fb_text"><span>Living Room</span></div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Bed Room</span></div>
+							</div>
 						</div>
-					</div>
-					<div class="front-bar_type">
-						<div class="fb_box">
-						<div class="fb_text"><span class="ti-desktop"></span></div>
-						<div class="fb_text"><span>Living Room</span></div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Home Office</span></div>
+							</div>
 						</div>
-					</div>
-					<div class="front-bar_type">
-						<div class="fb_box">
-						<div class="fb_text"><span class="ti-desktop"></span></div>
-						<div class="fb_text"><span>Living Room</span></div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Home Gym</span></div>
+							</div>
 						</div>
-					</div>
-					<div class="front-bar_type">
-						<div class="fb_box">
-						<div class="fb_text"><span class="ti-desktop"></span></div>
-						<div class="fb_text"><span>Living Room</span></div>
+						<div class="front-bar_type">
+							<div class="fb_box">
+							<div class="fb_text"><span class="ti-desktop"></span></div>
+							<div class="fb_text"><span>Closets</span></div>
+							</div>
 						</div>
-					</div>
 					</li>
+					
 				</ul>
 			</div>
 						
@@ -135,19 +136,25 @@
 		<div class="right-in" ng-controller="mycontrol">
 			<div class="bottom-side">
 				<h3>Objects</h3>
-
-				<select id="js-select" ng-model="select" ng-options="x for x in chairs"></select>
+				<span class="choose">Choose a category</span>
+				<select class="selectbox" id="js-select" ng-model="select" data-target=".cats">
+					<option ng-repeat="v in chairs" data-show="{{v.show}}">{{ v.label }}</option>
+				</select>
 				<div class="category_image">
-					<div class="inh clearfix">
+					<div class="cats clearfix">
 						<ul class="ul1">
 							<li><img src="images/office1.jpg"></li>
 							<li><img src="images/office2.jpg"></li>
+							<li><img src="images/office1.jpg"></li>
+							<li><img src="images/office2.jpg"></li>
+							<li><img src="images/office1.jpg"></li>
+							<li><img src="images/office2.jpg"></li>
 						</ul>
-						<ul class="ul2" style="display:none;">
+						<ul class="ul2">
 							<li><img src="images/kids1.jpg"></li>
 							<li><img src="images/kids2.jpg"></li>
 						</ul>
-						<ul class="ul3" style="display:none;">
+						<ul class="ul3">
 							<li><img src="images/wood1.jpg"></li>
 							<li><img src="images/wood2.jpg"></li>
 						</ul>
